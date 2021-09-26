@@ -12,7 +12,7 @@ class Dog extends Animal
   System.out.println("barking");
   }
  }
-class TestInh
+public class Main
 {
   public static void main(String[] args)
   {
