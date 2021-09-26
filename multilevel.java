@@ -19,7 +19,7 @@ class BabyDog extends Dog
   System.out.println("weeping...");
   }  
 }  
-class TestInheritance2
+public class Main
 {  
  public static void main(String args[])
  {  
