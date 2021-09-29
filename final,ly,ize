@@ -1,0 +1,70 @@
+//final
+//Final keyword is used with the classes, methods and variables.Once declared, final variable becomes constant and cannot be modified.
+//Final method cannot be overridden by sub class.
+//Final class cannot be inherited.
+//Final method is executed only when we call it.
+public class Main {  
+    //declaring final variable  
+    final int age = 18;  
+    void display() {  
+      
+    // reassigning value to age variable   
+    // gives compile time error  
+    age = 55;  
+    }  
+      
+    public static void main(String[] args) {  
+      
+    Main obj = new Main();  
+    // gives compile time error  
+    obj.display();  
+    }  
+}  
+
+//finally
+//finally is the block in Java Exception Handling to execute the important code whether the exception occurs or not.
+//Finally block is always related to the try and catch block in exception handling.
+//Finally block is executed as soon as the try-catch block is executed.
+//It's execution is not dependant on the exception.
+public class Main {    
+      public static void main(String args[]){   
+      try {    
+        System.out.println("Inside try block");  
+      // below code throws divide by zero exception  
+       int data=25/0;    
+       System.out.println(data);    
+      }   
+      // handles the Arithmetic Exception / Divide by zero exception  
+      catch (ArithmeticException e){  
+        System.out.println("Exception handled");  
+        System.out.println(e);  
+      }   
+      // executes regardless of exception occurred or not   
+      finally {  
+        System.out.println("finally block is always executed");  
+      }    
+      System.out.println("rest of the code...");    
+      }    
+    }    
+//finalize
+//finalize is the method in Java which is used to perform clean up processing just before object is garbage collected.
+//finalize() method is used with the objects.
+//finalize method performs the cleaning activities with respect to the object before its destruction.
+//finalize method is executed just before the object is destroyed.
+public class Main {    
+     public static void main(String[] args)     
+    {     
+        FinalizeExample obj = new FinalizeExample();        
+        // printing the hashcode   
+        System.out.println("Hashcode is: " + obj.hashCode());           
+        obj = null;    
+        // calling the garbage collector using gc()   
+        System.gc();     
+        System.out.println("End of the garbage collection");     
+    }     
+   // defining the finalize method   
+    protected void finalize()     
+    {     
+        System.out.println("Called the finalize() method");     
+    }     
+}    
